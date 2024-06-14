@@ -1,0 +1,14 @@
+{
+  "name": "shared",
+  "version": "0.0.1",
+  "description": "Shared consts and tools",
+  "scripts": {
+    "build": "tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "typescript": "^5.4.5"
+  }
+}

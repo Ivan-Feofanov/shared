@@ -1,0 +1,24 @@
+name: Compile Typescript files
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  compile:
+    name: compile typescript
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GH_TOKEN }}
+
+      # compile typescript
+      - uses: actions/setup-node@v4
+      - run: npm install
+      - run: tsc
+
+      - uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: Add compiled typescript files
